@@ -7,8 +7,8 @@
     <title>Todo list</title>
   </head>
   <body>
-    <form>
-      {{form.title}}
+    <form method="POST" action="/">
+      {% csrf_token %} {{form.title}}
       <input type="submit" name="create todo" />
     </form>
     {% for todo in todos %}
