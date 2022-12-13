@@ -7,9 +7,14 @@
     <title>Todo list</title>
   </head>
   <body>
-    <h3>list</h3>
+    <form>
+      {{form.title}}
+      <input type="submit" name="create todo" />
+    </form>
     {% for todo in todos %}
-    <li>{{todo}}</li>
+    <div>
+      <p>{{ todo }}</p>
+    </div>
     {% endfor %}
   </body>
 </html>
